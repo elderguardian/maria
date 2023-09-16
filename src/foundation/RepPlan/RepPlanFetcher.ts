@@ -1,7 +1,7 @@
 import { IRepPlanFetcher } from "./IRepPlanFetcher";
 import { IRepPlanFetchOptions } from "./IRepPlanFetchOptions";
 import { IRepPlanEntry } from "./IRepPlanEntry";
-import { IFullAuth } from "../Authenticator/IFullAuth";
+import { IFullAuth } from "../../core/Authenticator/IFullAuth";
 
 export class RepPlanFetcher implements IRepPlanFetcher {
   async fetch(
