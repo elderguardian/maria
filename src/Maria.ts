@@ -1,11 +1,11 @@
 import { IMaria } from "./IMaria";
-import { IRepPlanFetchOptions } from "../core/RepPlan/IRepPlanFetchOptions";
-import { IRepPlanEntry } from "../core/RepPlan/IRepPlanEntry";
+import { ISessionHandler } from "./core/Authenticator/SessionHandler/ISessionHandler";
+import { IRepPlanFetcher } from "./foundation/RepPlan/IRepPlanFetcher";
+import { SessionHandler } from "./core/Authenticator/SessionHandler/SessionHandler";
+import { IRepPlanFetchOptions } from "./foundation/RepPlan/IRepPlanFetchOptions";
+import { IRepPlanEntry } from "./foundation/RepPlan/IRepPlanEntry";
+import { RepPlanFetcher } from "./foundation/RepPlan/RepPlanFetcher";
 import { IMariaOptions } from "./IMariaOptions";
-import { ISessionHandler } from "../core/Authenticator/SessionHandler/ISessionHandler";
-import { SessionHandler } from "../core/Authenticator/SessionHandler/SessionHandler";
-import { IRepPlanFetcher } from "../core/RepPlan/IRepPlanFetcher";
-import { RepPlanFetcher } from "../core/RepPlan/RepPlanFetcher";
 
 export class Maria implements IMaria {
   private sessionHandler: ISessionHandler;
