@@ -1,5 +1,7 @@
-import { IAuthOptions } from "./core/Authenticator/IAuthOptions";
-
 export interface IMariaOptions {
-  authOptions: IAuthOptions;
+  auth: {
+    username: string;
+    password: string;
+    school: string;
+  };
 }

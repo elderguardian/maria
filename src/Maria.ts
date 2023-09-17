@@ -6,6 +6,7 @@ import { IRepPlanFetchOptions } from "./foundation/RepPlan/IRepPlanFetchOptions"
 import { IRepPlanEntry } from "./foundation/RepPlan/IRepPlanEntry";
 import { RepPlanFetcher } from "./foundation/RepPlan/RepPlanFetcher";
 import { IMariaOptions } from "./IMariaOptions";
+import { SchoolFetcher } from "./core/SchoolFetcher/SchoolFetcher";
 
 export class Maria implements IMaria {
   private sessionHandler: ISessionHandler;
@@ -19,17 +20,26 @@ export class Maria implements IMaria {
   }
 
   async fetchRepPlan(options: IRepPlanFetchOptions): Promise<IRepPlanEntry[]> {
-    const sessionId = await this.sessionHandler.getSessionId(
-      this.options.authOptions
+    const school = await new SchoolFetcher().fetchSchoolOrNull(
+      this.options.auth.school
     );
+
+    if (!school) {
+      throw new Error("Could not find a school with that name.");
+    }
+
+    const authOptions = {
+      username: this.options.auth.username,
+      password: this.options.auth.password,
+      school,
+    };
+
+    const sessionId = await this.sessionHandler.getSessionId(authOptions);
 
     if (!this.repPlanFetcher) {
       this.repPlanFetcher = new RepPlanFetcher();
     }
 
-    return this.repPlanFetcher.fetch(
-      { authOptions: this.options.authOptions, sessionId },
-      options
-    );
+    return this.repPlanFetcher.fetch({ authOptions, sessionId }, options);
   }
 }
