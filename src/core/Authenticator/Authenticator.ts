@@ -5,7 +5,7 @@ export class Authenticator implements IAuthenticator {
   private async getFirstAuthResponse(
     authOptions: IAuthOptions
   ): Promise<Response> {
-    const authLinkGetUrl = `https://login.schulportal.hessen.de/?i=${authOptions.schoolId}&`;
+    const authLinkGetUrl = `https://login.schulportal.hessen.de/?i=${authOptions.school.id}&`;
 
     return await fetch(authLinkGetUrl, {
       headers: {
@@ -14,7 +14,7 @@ export class Authenticator implements IAuthenticator {
       redirect: "manual",
       body: encodeURI(
         `user2=${authOptions.username}` +
-          `&user=${authOptions.schoolId}.${authOptions.username}` +
+          `&user=${authOptions.school.id}.${authOptions.username}` +
           `&password=${authOptions.password}`
       ),
       method: "POST",

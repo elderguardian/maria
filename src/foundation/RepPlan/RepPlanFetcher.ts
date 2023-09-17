@@ -22,8 +22,8 @@ export class RepPlanFetcher implements IRepPlanFetcher {
         Host: "start.schulportal.hessen.de",
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
         Cookie:
-          `sph-login-upstream=4;schulportal_lastschool=${fullAuth.authOptions.schoolId}; ` +
-          `i=${fullAuth.authOptions.schoolId}; ` +
+          `sph-login-upstream=4;schulportal_lastschool=${fullAuth.authOptions.school.id}; ` +
+          `i=${fullAuth.authOptions.school.id}; ` +
           `sid=${fullAuth.sessionId}`,
       },
       body: formData,

@@ -1,5 +1,7 @@
+import { ISchool } from "../SchoolFetcher/ISchool";
+
 export interface IAuthOptions {
   username: string;
   password: string;
-  schoolId: number;
+  school: ISchool;
 }
