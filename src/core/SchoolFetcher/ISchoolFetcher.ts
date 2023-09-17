@@ -1,5 +1,6 @@
 import { ISchool } from "./ISchool";
+import { ISchoolFetchOptions } from "./ISchoolFetchOptions";
 
 export interface ISchoolFetcher {
-  fetchSchoolOrNull(name: string): Promise<ISchool | null>;
+  fetchSchoolOrNull(options: ISchoolFetchOptions): Promise<ISchool | null>;
 }
