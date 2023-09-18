@@ -35,7 +35,7 @@ export class RepPlanFetcher implements IRepPlanFetcher {
     for (const rawEntry of rawPlan) {
       parsedPlan.push({
         type: rawEntry.Art,
-        date: new Date(rawEntry.Tag),
+        date: new Date(rawEntry.Tag.split(".").reverse().join("-")),
         teachers: {
           regular: {
             name: rawEntry.Lehrer,
@@ -48,11 +48,17 @@ export class RepPlanFetcher implements IRepPlanFetcher {
         },
         lesson: parseInt(rawEntry.Stunde),
         classes: [rawEntry.Klasse, rawEntry.Klasse_alt].filter(
-          (e) => e != null
+          (e) => e != null && e != ""
         ),
-        subjects: [rawEntry.Fach, rawEntry.Fach_alt].filter((e) => e != null),
-        rooms: [rawEntry.Raum, rawEntry.Raum_alt].filter((e) => e != null),
-        notices: [rawEntry.Hinweis, rawEntry.Hinweis2].filter((e) => e != null),
+        subjects: [rawEntry.Fach, rawEntry.Fach_alt].filter(
+          (e) => e != null && e != ""
+        ),
+        rooms: [rawEntry.Raum, rawEntry.Raum_alt].filter(
+          (e) => e != null && e != ""
+        ),
+        notices: [rawEntry.Hinweis, rawEntry.Hinweis2].filter(
+          (e) => e != null && e != ""
+        ),
         learnGroup: rawEntry.Lerngruppe,
         talkedOutEntry: rawEntry._sprechend,
       });
