@@ -35,7 +35,7 @@ export class RepPlanFetcher implements IRepPlanFetcher {
     for (const rawEntry of rawPlan) {
       parsedPlan.push({
         type: rawEntry.Art,
-        date: new Date(rawEntry.Tag),
+        date: new Date(rawEntry.Tag.split(".").reverse().join("-")),
         teachers: {
           regular: {
             name: rawEntry.Lehrer,
