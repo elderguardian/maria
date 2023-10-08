@@ -1,8 +1,29 @@
 {
+  "name": "maria-hessen",
+  "description": "Simplify the process of fetching from the \"Schulportal Hessen\" or \"Lanis\"",
+  "version": "1.0.0",
+  "homepage": "https://github.com/elderguardian/maria#readme",
+  "license": "GPL-3.0",
+  "main": "dist/index.js",
+  "author": "elderguardian (https://github.com/elderguardian)",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elderguardian"
+  },
   "dependencies": {
     "dotenv": "^16.3.1",
     "node-html-parser": "^6.1.10",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "rm -rf build/ && tsc"
   }
 }
