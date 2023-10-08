@@ -6,6 +6,10 @@
   "license": "GPL-3.0",
   "main": "dist/index.js",
   "author": "elderguardian (https://github.com/elderguardian)",
+  "keywords": [
+    "schulportal-hessen",
+    "lanis"
+  ],
   "files": [
     "dist"
   ],
