@@ -5,7 +5,7 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "module": "commonjs",
-    "outDir": "build",
+    "outDir": "dist",
     "resolveJsonModule": true,
     "strict": true,
     "target": "es2020",
