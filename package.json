@@ -1,7 +1,7 @@
 {
   "name": "maria-hessen",
   "description": "Simplify the process of fetching from the \"Schulportal Hessen\" or \"Lanis\"",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "homepage": "https://github.com/elderguardian/maria#readme",
   "license": "GPL-3.0",
   "main": "dist/index.js",
