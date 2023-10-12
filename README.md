@@ -14,6 +14,8 @@ npm i maria-hessen
 
 # Usage
 
+Get your school's name and city from the login page of the Schulportal. Search for your school in the school selector and use the full name displayed in the list. Some schools will have their location inside their name (e.g., `Hochtaunusschule Oberursel`, `city: Oberursel`).
+
 ```js
 const maria = new Maria({
     auth: {
