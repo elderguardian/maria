@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm i && npm run build
+      - run: npm i && npm run build && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_SECRET }}
 
@@ -20,6 +20,6 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
 
       - name: Publish tag to GPR
-        run: npm publish
+        run: cd dist/lib && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ github.token }}
