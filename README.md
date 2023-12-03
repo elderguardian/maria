@@ -24,3 +24,4 @@ const maria = new Maria({
         },
     },
 });
+```
