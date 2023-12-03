@@ -33,3 +33,6 @@ const futureRepPlan = await maria.fetchRepPlan({
     date: new Date("18 Sep 2024"),
 });
 ```
+
+> [!IMPORTANT]
+> This library is not officially affiliated with the "Schulportal Hessen" or "Lanis" website. It is a community-driven project.
