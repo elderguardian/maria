@@ -35,4 +35,4 @@ const futureRepPlan = await maria.fetchRepPlan({
 ```
 
 > [!IMPORTANT]
-> This library is not officially affiliated with the "Schulportal Hessen" or "Lanis" website. It is a community-driven project.
+> This library is not officially affiliated with the "Schulportal Hessen" or "Lanis" website. It is a community-driven project created by students in their free time.
