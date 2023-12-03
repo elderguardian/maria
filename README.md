@@ -12,9 +12,9 @@ npm i maria-hessen
 - Fetch homework on the "Mein Unterricht" (My Lessons) page"
 
 ### 🛠️ Usage
-1. Get your school's name and city from the login page.
+1. Get your school's name and city from the [login page](https://login.schulportal.hessen.de/).
 > [!TIP]
-> Look up how the Schulportal knows your school. Sometimes the names are kind of weird and contain locations.
+> Look up how the Schulportal knows your school. Sometimes the names are weird and contain locations.
 ```js
 const maria = new Maria({
     auth: {
