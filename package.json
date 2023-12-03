@@ -19,9 +19,9 @@
   },
   "dependencies": {
     "dotenv": "^16.3.1",
-    "node-html-parser": "^6.1.10",
+    "node-html-parser": "^6.1.11",
     "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "directories": {
     "test": "test"
