@@ -13,6 +13,8 @@ npm i maria-hessen
 
 ### 🛠️ Usage
 1. Get your school's name and city from the login page.
+> [!TIP]
+> Look up how the Schulportal knows your school. Sometimes the names are kind of weird and contain locations.
 ```js
 const maria = new Maria({
     auth: {
@@ -23,5 +25,11 @@ const maria = new Maria({
             city: "Frankfurt a. M.",
         },
     },
+});
+
+const currentRepPlan = await maria.fetchRepPlan({});
+
+const futureRepPlan = await maria.fetchRepPlan({
+    date: new Date("18 Sep 2024"),
 });
 ```
