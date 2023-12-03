@@ -1,4 +1,12 @@
-### 🎒 About Maria
+<div align="center">
+    <br><br>
+    <img width="30%" src="https://github.com/elderguardian/maria/assets/129489839/97f0e63a-5eb4-4ed3-8144-6ea2e27f853f">
+    <br><br>
+    Designed to simplify.
+    <br><br>
+</div>
+
+## 🎒 About Maria
 A library to fetch from the Schulportal, a website used by students and teachers in Hessen, Germany.
 
 ### 🚀 Quick Start
