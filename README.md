@@ -1,21 +1,28 @@
-# Maria
+<div align="center">
+    <br><br>
+    <img width="30%" src="https://github.com/elderguardian/maria/assets/129489839/97f0e63a-5eb4-4ed3-8144-6ea2e27f853f">
+    <br><br>
+    Designed to simplify.
+    <br><br>
+</div>
 
-Maria is a TypeScript library designed to simplify the process of fetching from the "Schulportal Hessen" or "Lanis" website. This library provides a convenient interface for programmatically retrieving teacher plans, making it easier for developers to integrate this data into their applications.
+## 🎒 About Maria
+A library to fetch from the Schulportal, a website used by students and teachers in Hessen, Germany.
 
-# Installation
-```
+### 🚀 Quick Start
+```bash
 npm i maria-hessen
 ```
 
-# Features
+### 📚 Features
 - Handle authentication / Session Management
 - Fetch representative teacher plan
 - Fetch homework on the "Mein Unterricht" (My Lessons) page"
 
-# Usage
-
-Get your school's name and city from the login page of the Schulportal. Search for your school in the school selector and use the full name displayed in the list. Some schools will have their location inside their name (e.g., `Hochtaunusschule Oberursel`, `city: Oberursel`).
-
+### 🛠️ Usage
+1. Get your school's name and city from the [login page](https://login.schulportal.hessen.de/).
+> [!TIP]
+> Look up how the Schulportal knows your school. Sometimes the names are weird and contain locations.
 ```js
 const maria = new Maria({
     auth: {
@@ -35,6 +42,5 @@ const futureRepPlan = await maria.fetchRepPlan({
 });
 ```
 
-# Notice
-
-This library is not officially affiliated with the "Schulportal Hessen" or "Lanis" website. It is a community-driven project.
+> [!IMPORTANT]
+> This library is not officially affiliated with the "Schulportal Hessen" or "Lanis" website. It is a community-driven project created by students in their free time.
