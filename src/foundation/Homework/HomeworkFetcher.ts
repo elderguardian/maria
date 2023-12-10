@@ -27,7 +27,7 @@ export class HomeworkFetcher implements IHomeworkFetcher {
     const parsedHtml = parse(homeworkHtml);
     const homeworkTable = parsedHtml.querySelectorAll("#aktuellTable tbody tr");
 
-    let fetchedHomework: IHomeworkEntry[] = [];
+    const fetchedHomework: IHomeworkEntry[] = [];
 
     for (const homeworkRow of homeworkTable) {
       const subject = homeworkRow.querySelector(
