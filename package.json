@@ -21,7 +21,7 @@
     "dotenv": "^16.4.5",
     "node-html-parser": "^6.1.12",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "directories": {
     "test": "test"
